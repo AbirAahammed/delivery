@@ -1,0 +1,16 @@
+{
+    "name": "Java Kafka App",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "dev",  // Specify the main development service for VS Code
+    "workspaceFolder": "/workspace",
+    "remoteUser": "root",
+    "runServices": [
+        "dev",
+        "kafka",
+        "zookeeper",
+        "kafka-ui"
+    ],
+    "shutdownAction": "stopCompose"
+}
