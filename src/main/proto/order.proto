@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package com.freedom.delivery.model;
+
+// Enum for Status
+enum Status {
+  CREATED = 0;  // Represents an order that has been cancelled
+  PENDING = 1;  // Represents an order that is pending
+  DELIVERED = 2;  // Represents an order that has been delivered
+}
+
+
+
+// Message for Order
+message Order {
+  string name = 1;
+  double price = 2;
+  Status status = 3;
+  string sessionId = 4;
+}

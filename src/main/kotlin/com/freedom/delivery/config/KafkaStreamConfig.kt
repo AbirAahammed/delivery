@@ -8,6 +8,7 @@ import java.util.*
 
 @Component
 class KafkaStreamsConfig {
+
     @Value("\${kafka.streams.application-id}")
     private val applicationId: String? = null
 
@@ -19,6 +20,7 @@ class KafkaStreamsConfig {
 
     @Value("\${kafka.streams.default-value-serde}")
     private val valueSerde: Class<*>? = null
+
     val kafkaStreamsProperties: Properties
         get() {
             val props = Properties()
